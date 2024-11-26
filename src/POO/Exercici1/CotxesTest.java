@@ -1,17 +1,15 @@
-package Exercici1;
-
-import java.util.Scanner;
+package POO.Exercici1;
 
 public class CotxesTest {
     public static void main(String[] args) {
 
         String marcaCotxe1 = "Toyota";
         String modelCotxe1 = "AE 86";
-        String matriculaCotxe1 = "1234 BCD";
+        String matriculaCotxe1 = "1234-BCD";
 
         String marcaCotxe2 = "Subaru";
         String modelCotxe2 = "BRZ";
-        String matriculaCotxe2 = "5678 FGH";
+        String matriculaCotxe2 = "5678-FGH";
 
         Cotxe cotxe1 = new Cotxe();
         Cotxe cotxe2 = new Cotxe();
@@ -35,7 +33,7 @@ public class CotxesTest {
         cotxe2.setModel(modelCotxe1);
         cotxe2.setMatricula(matriculaCotxe1);
 
-        System.out.println("Cotxe 1: " + cotxe1.getMarca() + " " + cotxe1.getModel() + " - " + cotxe1.getMatricula());
+        System.out.println("\nCotxe 1: " + cotxe1.getMarca() + " " + cotxe1.getModel() + " - " + cotxe1.getMatricula());
         System.out.println("Cotxe 2: " + cotxe2.getMarca() + " " + cotxe2.getModel() + " - " + cotxe2.getMatricula());
     }
 }

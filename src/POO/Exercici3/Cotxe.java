@@ -1,19 +1,10 @@
-package  POO.Exercici1;
+package  POO.Exercici3;
 
 public class Cotxe {
     private String marca;
     private String model;
     private String matricula;
 
-    public String getMarca() {
-        return marca;
-    }
-    public String getModel() {
-        return model;
-    }
-    public String getMatricula() {
-        return matricula;
-    }
 
     public void setMarca(String marca) {
         this.marca = marca;
@@ -23,5 +14,11 @@ public class Cotxe {
     }
     public void setMatricula(String matricula) {
         this.matricula = matricula;
+    }
+
+    public void infoCotxe() {
+        System.out.println("Marca: " + marca);
+        System.out.println("Model: " + model);
+        System.out.println("Matricula: " + matricula);
     }
 }
