@@ -17,22 +17,22 @@ public class pt9Semafor {
         boolean passCotxes = semaforCotxes.equals("VERD");
 
         boolean pass = false;
-        boolean colisio = false;
-
-        switch (rol) {
-            case "TRANVIA":
+        boolean colisio = switch (rol) {
+            case "TRANVIA" -> {
                 pass = passTranvies;
-                colisio = passTranvies && (passVianants || passCotxes);
-                break;
-            case "VIANANT":
+                yield passTranvies && (passVianants || passCotxes);
+            }
+            case "VIANANT" -> {
                 pass = passVianants;
-                colisio = passVianants && (passTranvies || passCotxes);
-                break;
-            case "COTXE":
+                yield passVianants && (passTranvies || passCotxes);
+            }
+            case "COTXE" -> {
                 pass = passCotxes;
-                colisio = passCotxes && (passTranvies || passVianants);
-                break;
-        }
+                yield passCotxes && (passTranvies || passVianants);
+            }
+            default -> false;
+        };
+
         if (colisio) System.out.println("POSSIBLE COLISIO");
         else if (pass) System.out.println("ENDAVANT");
         else System.out.println("PARAR");
