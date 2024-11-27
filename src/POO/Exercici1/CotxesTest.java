@@ -4,7 +4,7 @@ public class CotxesTest {
     public static void main(String[] args) {
 
         String marcaCotxe1 = "Toyota";
-        String modelCotxe1 = "AE 86";
+        String modelCotxe1 = "AE86";
         String matriculaCotxe1 = "1234-BCD";
 
         String marcaCotxe2 = "Subaru";

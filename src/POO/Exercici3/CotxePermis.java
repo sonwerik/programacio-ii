@@ -44,7 +44,7 @@ public class CotxePermis {
                     System.out.println("Fins aviat!");
                     break;
                 default:
-                    System.out.println("Opció no vàlida, si us plau, escull una de les opcions anteriors.");
+                    System.out.println("\nOpció no vàlida, si us plau, escull una de les opcions anteriors.");
             }
         }
     }
@@ -71,7 +71,6 @@ public class CotxePermis {
         Scanner sc = new Scanner(System.in);
 
         System.out.print("Introdueix el nom complet del titular: ");
-        sc.nextLine();
         String nom = sc.nextLine();
         permis.setNom(nom);
 

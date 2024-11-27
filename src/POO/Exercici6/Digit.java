@@ -1,8 +1,38 @@
 package POO.Exercici6;
 
+import java.util.Scanner;
+
 public class Digit {
     public static void main(String[] args) {
-        Comptador digit = new Comptador(2);
-        System.out.println(digit);
+        Scanner sc = new Scanner(System.in);
+
+        ComptadorCiclic digit = new ComptadorCiclic();
+
+        boolean sortir = false;
+        while (!sortir) {
+
+            System.out.println("\n1. Consultar el digit");
+            System.out.println("2. Incremena el digit");
+            System.out.println("3. Reseteja el digit");
+            System.out.print("Escull una opció: ");
+            int opcio = sc.nextInt();
+            switch (opcio) {
+                case 1:
+                    System.out.println("Valor actual del digit: " + digit.consultar());
+                    break;
+                case 2:
+                    digit.incrementar();
+                    System.out.println("Valor actual del digit: " + digit.consultar());
+                    break;
+                case 3:
+                    digit.reset();
+                    System.out.println("Valor actual del digit: " + digit.consultar());
+                    break;
+                default:
+                    System.out.println("Opció no vàlida. Torna a intentar-ho.");
+                    break;
+            }
+        }
+        sc.close();
     }
 }
