@@ -33,9 +33,9 @@ public class Main {
 
         // Exercici 2 - Condicional
 
-        double alçada = sc.nextDouble();
+        double altura = sc.nextDouble();
         double pes = sc.nextDouble();
-        double IMC = pes / (alçada * alçada);
+        double IMC = pes / (altura * altura);
 
         if (IMC < 18.5) System.out.println("Pes insuficient");
         else if (IMC >= 18.5 && IMC <= 24.9) System.out.println("Pes normal");
