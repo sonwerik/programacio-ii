@@ -1,12 +1,12 @@
-package SCI.Seqüencials;
+package SCI.Sequencials;
 
 import java.util.Scanner;
 
 public class pt6TempsDeClasseInvertit {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
 
-        int s = scanner.nextInt() * 165;
+        int s = sc.nextInt() * 165;
 
         int h = s / 3600;
         int m = (s % 3600) / 60;

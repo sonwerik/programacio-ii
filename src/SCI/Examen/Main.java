@@ -7,7 +7,6 @@ public class Main {
         Scanner sc = new Scanner(System.in);
 
         // Exercici 1 - Seqüencial
-
         int horaInici = sc.nextInt();
         int minutInici = sc.nextInt();
         int segonInici = sc.nextInt();

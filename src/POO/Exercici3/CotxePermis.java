@@ -24,8 +24,9 @@ public class CotxePermis {
             System.out.println("-----------------------------------------");
             System.out.println("1. Modificar la informació del seu cotxe");
             System.out.println("2. Modificar la informació del seu permís");
-            System.out.println("3. Mostrar la teva informació");
-            System.out.print("\nTria una opció: ");
+            System.out.println("3. Mostrar informació del cotxe i del permis");
+            System.out.println("0. Sortir del programa");
+            System.out.print("\nSi us plau, esculli una opció: ");
             int opcio = sc.nextInt();
 
             switch (opcio) {
@@ -43,13 +44,14 @@ public class CotxePermis {
                     System.out.println("Fins aviat!");
                     break;
                 default:
-                    System.out.println("\nOpció no vàlida, si us plau, trii una de les següents opcions.");
+                    System.out.println("Opció no vàlida, si us plau, escull una de les opcions anteriors.");
             }
         }
     }
 
     public static void modificarCotxe(Cotxe cotxe) {
         Scanner sc = new Scanner(System.in);
+
         System.out.print("\nIntrodueix la marca del cotxe: ");
         String marca = sc.next();
         cotxe.setMarca(marca);
@@ -67,6 +69,7 @@ public class CotxePermis {
 
     public static void modificarPermis(PermisConduir permis) {
         Scanner sc = new Scanner(System.in);
+
         System.out.print("Introdueix el nom complet del titular: ");
         sc.nextLine();
         String nom = sc.nextLine();

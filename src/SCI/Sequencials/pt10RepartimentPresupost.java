@@ -1,17 +1,17 @@
-package SCI.Seqüencials;
+package SCI.Sequencials;
 
 import java.util.Scanner;
 
 
 public class pt10RepartimentPresupost {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
 
-        int howManyPrinter = scanner.nextInt();
-        int howManyPc = scanner.nextInt();
-        int howManyLaptop = scanner.nextInt();
-        int howManyExternalHardDisk = scanner.nextInt();
-        int howManyOfficeMaterial = scanner.nextInt();
+        int howManyPrinter = sc.nextInt();
+        int howManyPc = sc.nextInt();
+        int howManyLaptop = sc.nextInt();
+        int howManyExternalHardDisk = sc.nextInt();
+        int howManyOfficeMaterial = sc.nextInt();
 
         int printer = 500;
         int pc = 400;

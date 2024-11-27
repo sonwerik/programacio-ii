@@ -1,4 +1,4 @@
-package SCI.Seqüencials;
+package SCI.Sequencials;
 
 public class pt1HelloPoblenou {
     public static void main(String[] args) {

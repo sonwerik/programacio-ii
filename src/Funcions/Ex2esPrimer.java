@@ -1,4 +1,4 @@
-package POO.Funcions;
+package Funcions;
 
 public class Ex2esPrimer {
     public static void main(String[] args) {
@@ -9,7 +9,10 @@ public class Ex2esPrimer {
         boolean primer = true;
 
         for (int i = 2; i < n; i++) {
-            if (n % i == 0) primer = false;
+            if (n % i == 0) {
+                primer = false;
+                break;
+            }
         }
         return primer;
     }

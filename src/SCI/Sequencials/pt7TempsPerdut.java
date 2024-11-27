@@ -1,12 +1,12 @@
-package SCI.Seqüencials;
+package SCI.Sequencials;
 
 import java.util.Scanner;
 
 public class pt7TempsPerdut {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
 
-        int inputSeconds = scanner.nextInt();
+        int inputSeconds = sc.nextInt();
 
         int days = 33 * 5;
 

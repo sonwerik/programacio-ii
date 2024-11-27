@@ -1,4 +1,4 @@
-package POO.Funcions;
+package Funcions;
 
 public class Ex1Singe {
     public static void main(String[] args) {

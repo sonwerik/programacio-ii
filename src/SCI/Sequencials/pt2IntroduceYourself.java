@@ -1,15 +1,15 @@
-package SCI.Seqüencials;
+package SCI.Sequencials;
 
 import java.util.Scanner;
 
 public class pt2IntroduceYourself {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
 
-        String name = scanner.next();
-        String lastName = scanner.next();
-        int age = scanner.nextInt();
-        String study = scanner.next();
+        String name = sc.next();
+        String lastName = sc.next();
+        int age = sc.nextInt();
+        String study = sc.next();
 
         System.out.println("Hola em dic " + name + " " +  lastName + ", tinc " + age + " anys i realitzo el cicle formatiu de " + study);
     }

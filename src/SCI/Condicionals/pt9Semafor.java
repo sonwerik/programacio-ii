@@ -1,3 +1,5 @@
+package SCI.Condicionals;
+
 import java.util.Scanner;
 
 public class pt9Semafor {

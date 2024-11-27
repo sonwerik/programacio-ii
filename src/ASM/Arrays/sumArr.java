@@ -23,27 +23,12 @@ public class sumArr {
 
         int[] combined = new int[n1 + n2];
 
-        for (int i = 0; i < n1; i++) {
-            combined[i] = num1[i];
-        }
-
-        for (int i = 0; i < n2; i++) {
-            combined[i + n1] = num2[i];
-        }
-
-        // System.arraycopy(num1, 0, combined, 0, n1);
-        // System.arraycopy(num2, 0, combined, n1, n2);
-
+        System.arraycopy(num1, 0, combined, 0, n1);
+        System.arraycopy(num2, 0, combined, n1, n2);
         Arrays.sort(combined);
 
-        for (int i = 0; i < combined.length ;i++) {
-            System.out.print((combined[i] + " "));
-        }
-
-/*
         for (int j : combined) {
             System.out.print((j + " "));
         }
- */
     }
 }

@@ -1,12 +1,12 @@
-package SCI.Seqüencials;
+package SCI.Sequencials;
 
 import java.util.Scanner;
 
 public class pt8WifiRadi {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
 
-        float area = scanner.nextFloat();
+        float area = sc.nextFloat();
         float radius = (float) Math.sqrt(area / Math.PI);
         int distance = Math.round(radius);
 

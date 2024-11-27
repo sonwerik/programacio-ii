@@ -4,11 +4,11 @@ public class TriangleTest {
     public static void main(String[] args) {
 
         Triangle triangle = new Triangle();
-        System.out.println("\nEl perimetre del Triangle és: " + triangle.perimetre());
-        System.out.println("L'area del triangle és: " + triangle.area());
+        System.out.println("\nEl perímetre del triangle amb els valors predeterminats és: " + triangle.perimetreTriangle());
+        System.out.println("L'area del triangle amb els valors predeterminats és: " + triangle.areaTriangle());
 
-        Triangle triangleVariacioParametres = new Triangle(6.0, 8.0, 10.0);
-        System.out.println("\nEl perimetre del Triangle és: " + triangleVariacioParametres.perimetre());
-        System.out.println("L'area del Triangle és: " + triangleVariacioParametres.area());
+        Triangle triangleModificat = new Triangle(6.0, 8.0, 10.0);
+        System.out.println("\nEl perímetre del triangle amb els valors modificats és: " + triangleModificat.perimetreTriangle());
+        System.out.println("L'area del triangle amb els valors modificats és: " + triangleModificat.areaTriangle());
     }
 }

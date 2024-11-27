@@ -1,5 +1,7 @@
 package SCI.Iteratius;
 
+import Funcions.Ex2esPrimer;
+
 import java.util.Scanner;
 
 public class pt16Primers {
@@ -7,11 +9,7 @@ public class pt16Primers {
         Scanner sc = new Scanner(System.in);
 
         int n = sc.nextInt();
-        boolean primer = true;
-
-        for (int i = 2; i < n; i++) {
-            if (n % i == 0) primer = false;
-        }
+        boolean primer = Ex2esPrimer.esPrimer(n);
         System.out.println(String.valueOf(primer).toUpperCase());
     }
 }
