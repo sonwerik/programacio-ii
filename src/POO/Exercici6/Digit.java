@@ -8,7 +8,8 @@ public class Digit {
 
         ComptadorCiclic digit = new ComptadorCiclic();
 
-        while (true) {
+        boolean continuar = true;
+        while (continuar) {
 
             System.out.println("\n1. Consultar el digit");
             System.out.println("2. Incremena el digit");
@@ -27,6 +28,9 @@ public class Digit {
                     digit.reset();
                     System.out.println("Valor del digit resetejat. Consulti el digit per comprovar-ho.");
                     break;
+                case 4:
+                    System.out.println("Sortint del programa.");
+                    continuar = false;
                 default:
                     System.out.println("Opció no vàlida. Torna a intentar-ho.");
                     break;
