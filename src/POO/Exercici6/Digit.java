@@ -22,11 +22,11 @@ public class Digit {
                     break;
                 case 2:
                     digit.incrementar();
-                    System.out.println("Valor del digit incrementat. Consulti el digit per comprovar-ho.");
+                    System.out.println("Valor ha incrementat. Consulti el digit per comprovar-ho.");
                     break;
                 case 3:
                     digit.reset();
-                    System.out.println("Valor del digit resetejat. Consulti el digit per comprovar-ho.");
+                    System.out.println("Valor ha resetejat. Consulti el digit per comprovar-ho.");
                     break;
                 case 4:
                     System.out.println("Sortint del programa.");
