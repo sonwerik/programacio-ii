@@ -59,8 +59,7 @@ public class DosDigits {
                     if (digit1.consultar() == 0) {
                         digit2.incrementar();
                     }
-                    System.out.println("Valor actual del primer digit: " + digit1.consultar());
-                    System.out.println("Valor actual del segon digit: " + digit2.consultar());
+                    System.out.println("Tots dos dígits incrementats.");
                     break;
                 case 9:
                     digit1.reset();
