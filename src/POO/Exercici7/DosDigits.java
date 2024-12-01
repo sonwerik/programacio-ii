@@ -40,6 +40,7 @@ public class DosDigits {
                 case 4:
                     digit2.incrementar();
                     System.out.println("Valor incrementat.");
+                    break;
                 case 5:
                     digit1.reset();
                     System.out.println("Valor resetejat.");
@@ -49,8 +50,9 @@ public class DosDigits {
                     System.out.println("Valor resetejat.");
                     break;
                 case 7:
-                    System.out.println("Valor actual del primer digit: " + digit1.consultar());
-                    System.out.println("Valor actual del segon digit: " + digit2.consultar());
+                    System.out.println("Valor actual:");
+                    System.out.println("Primer digit: " + digit1.consultar());
+                    System.out.println("Segon digit: " + digit2.consultar());
                     break;
                 case 8:
                     digit1.incrementar();
@@ -68,6 +70,7 @@ public class DosDigits {
                 case 0:
                     System.out.println("Sortint del programa.");
                     continuar = false;
+                    break;
                 default:
                     System.out.println("Opció no vàlida. Torna a intentar-ho.");
                     break;
