@@ -8,8 +8,8 @@ public class DosDigits {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        Comptador digit1 = new Comptador();
-        ComptadorSegonDigit digit2 = new ComptadorSegonDigit();
+        Comptador digit1 = new Comptador(9);
+        Comptador digit2 = new Comptador(99);
 
         boolean continuar = true;
         while (continuar) {
@@ -31,35 +31,38 @@ public class DosDigits {
                     System.out.println("Valor actual del primer digit: " + digit1.consultar());
                     break;
                 case 2:
-                    System.out.println("Valor actual del segon digit: " + digit2.consultarSegonDigit());
+                    System.out.println("Valor actual del segon digit: " + digit2.consultar());
                     break;
                 case 3:
                     digit1.incrementar();
                     System.out.println("Valor incrementat.");
                     break;
                 case 4:
-                    digit2.incrementarSegonDigit();
+                    digit2.incrementar();
                     System.out.println("Valor incrementat.");
                 case 5:
                     digit1.reset();
                     System.out.println("Valor resetejat.");
                     break;
                 case 6:
-                    digit2.resetSegonDigit();
+                    digit2.reset();
                     System.out.println("Valor resetejat.");
                     break;
                 case 7:
                     System.out.println("Valor actual del primer digit: " + digit1.consultar());
-                    System.out.println("Valor actual del segon digit: " + digit2.consultarSegonDigit());
+                    System.out.println("Valor actual del segon digit: " + digit2.consultar());
                     break;
                 case 8:
                     digit1.incrementar();
-                    digit2.incrementarSegonDigit();
-                    System.out.println("Valor incrementat.");
+                    if (digit1.consultar() == 0) {
+                        digit2.incrementar();
+                    }
+                    System.out.println("Valor actual del primer digit: " + digit1.consultar());
+                    System.out.println("Valor actual del segon digit: " + digit2.consultar());
                     break;
                 case 9:
                     digit1.reset();
-                    digit2.resetSegonDigit();
+                    digit2.reset();
                     System.out.println("Valor resetejat.");
                     break;
                 case 0:

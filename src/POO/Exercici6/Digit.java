@@ -6,7 +6,7 @@ public class Digit {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        Comptador digit = new Comptador();
+        Comptador digit = new Comptador(9);
 
         boolean continuar = true;
         while (continuar) {

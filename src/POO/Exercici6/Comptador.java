@@ -2,19 +2,21 @@ package POO.Exercici6;
 
 public class Comptador {
     private int digit;
+    private int limit;
 
-    public Comptador() {
+    public Comptador(int limit) {
         this.digit = 0;
+        this.limit = limit;
     }
 
     public int consultar() {
         return this.digit;
     }
     public void incrementar() {
-        if (this.digit < 9) {
-            digit++;
+        if (this.digit < this.limit) {
+            this.digit++;
         } else {
-            digit = 0;}
+            this.digit = 0;}
     }
     public void reset() {
         this.digit = 0;
