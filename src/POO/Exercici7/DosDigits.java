@@ -28,10 +28,10 @@ public class DosDigits {
             int opcio = sc.nextInt();
             switch (opcio) {
                 case 1:
-                    System.out.println("Valor actual del primer digit: " + digit1  .consultar());
+                    System.out.println("Valor actual del primer digit: " + digit1.consultar());
                     break;
                 case 2:
-                    System.out.println("Valor actual del segon digit: " + digit2  .consultarSegonDigit());
+                    System.out.println("Valor actual del segon digit: " + digit2.consultarSegonDigit());
                     break;
                 case 3:
                     digit1.incrementar();
@@ -49,8 +49,8 @@ public class DosDigits {
                     System.out.println("Valor resetejat.");
                     break;
                 case 7:
-                    System.out.println("Valor actual del primer digit: " + digit1  .consultar());
-                    System.out.println("Valor actual del segon digit: " + digit2  .consultarSegonDigit());
+                    System.out.println("Valor actual del primer digit: " + digit1.consultar());
+                    System.out.println("Valor actual del segon digit: " + digit2.consultarSegonDigit());
                     break;
                 case 8:
                     digit1.incrementar();
