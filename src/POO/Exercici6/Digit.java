@@ -6,7 +6,7 @@ public class Digit {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        ComptadorCiclic digit = new ComptadorCiclic();
+        Comptador digit = new Comptador();
 
         boolean continuar = true;
         while (continuar) {
@@ -22,11 +22,11 @@ public class Digit {
                     break;
                 case 2:
                     digit.incrementar();
-                    System.out.println("Valor ha incrementat. Consulti el digit per comprovar-ho.");
+                    System.out.println("Valor incrementat.");
                     break;
                 case 3:
                     digit.reset();
-                    System.out.println("Valor ha resetejat. Consulti el digit per comprovar-ho.");
+                    System.out.println("Valor resetejat.");
                     break;
                 case 4:
                     System.out.println("Sortint del programa.");
