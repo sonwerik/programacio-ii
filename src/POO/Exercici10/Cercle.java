@@ -29,6 +29,6 @@ public class Cercle {
 
     @Override
     public String toString() {
-        return "Cercle: Radi = " + radi + ", Perímetre = " + getPerimetre() + ", Àrea = " + getArea();
+        return "Cercle: \nRadi = " + radi + "\nPerímetre = " + getPerimetre() + "\nÀrea = " + getArea() + "\n";
     }
 }

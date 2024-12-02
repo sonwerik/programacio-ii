@@ -7,6 +7,11 @@ public class TestCilindre {
 
         System.out.println(cilindre1);
         System.out.println(cilindre2);
-        System.out.println("El Cilindre 1 és més gran que el Cilindre 2: " + cilindre1.esMesGranQue(cilindre2));
+
+        if (cilindre1.esMesGranQue(cilindre2)) {
+            System.out.println("El Cilindre 1 és més gran que el Cilindre 2.");
+        } else {
+            System.out.println("El Cilindre 2 és més gran que el Cilindre 1.");
+        }
     }
 }

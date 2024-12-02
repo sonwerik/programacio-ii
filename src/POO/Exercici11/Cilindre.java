@@ -45,7 +45,7 @@ public class Cilindre {
 
     @Override
     public String toString() {
-        return "Cilindre: Radi = " + base.getRadi() + ", Altura = " + altura +
-                ", Àrea Total = " + getAreaTotal() + ", Volum = " + getVolum();
+        return "Cilindre: \nRadi = " + base.getRadi() + "\nAltura = " + altura +
+                "\nÀrea Total = " + getAreaTotal() + "\nVolum = " + getVolum() + "\n";
     }
 }
