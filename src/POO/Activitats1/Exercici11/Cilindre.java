@@ -3,20 +3,20 @@ package POO.Activitats1.Exercici11;
 import POO.Activitats1.Exercici10.Cercle;
 
 public class Cilindre {
-    private final Cercle BASE;
-    private final double ALTURA;
+    private Cercle base;
+    private double altura;
 
     public Cilindre(double radi, double altura) {
-        this.BASE = new Cercle(radi);
-        this.ALTURA = altura;
+        this.base = new Cercle(radi);
+        this.altura = altura;
     }
 
     public double getAreaTotal() {
-        return 2 * BASE.getArea() + BASE.getPerimetre() * ALTURA;
+        return 2 * base.getArea() + base.getPerimetre() * altura;
     }
 
     public double getVolum() {
-        return BASE.getArea() * ALTURA;
+        return base.getArea() * altura;
     }
 
     public boolean esMesGranQue(Cilindre altre) {
@@ -25,7 +25,7 @@ public class Cilindre {
 
     @Override
     public String toString() {
-        return "Cilindre: \nRadi = " + BASE.getRadi() + "\nAltura = " + ALTURA +
+        return "Cilindre: \nRadi = " + base.getRadi() + "\nAltura = " + altura +
                 "\nÀrea Total = " + getAreaTotal() + "\nVolum = " + getVolum() + "\n";
     }
 }

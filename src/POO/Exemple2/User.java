@@ -1,4 +1,4 @@
-package POO.Exemples.Exemple2;
+package POO.Exemple2;
 
 public class User {
     private String name;
