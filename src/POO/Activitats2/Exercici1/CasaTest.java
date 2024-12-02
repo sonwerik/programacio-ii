@@ -5,27 +5,26 @@ public class CasaTest {
         Casa casaMare = new Casa();
         Casa casaPare = new Casa();
 
-        Sala menjadorGranCasaMare = new Sala();
-        Sala menjadorPetitCasaMare = new Sala();
-        Sala menjadroCasaPare = new Sala();
-
-        Cuina cuinaCasaMare = new Cuina();
-        Cuina cuinaCasaPare = new Cuina();
-
         casaMare.setDireccio("C/ Rocafort 167");
         casaMare.setSuperficie(120);
-        casaMare.setSalaCasa(menjadorGranCasaMare);
-        casaMare.setSalaCasa(menjadorPetitCasaMare);
-        casaMare.setCuinaCasa(cuinaCasaMare);
-        casaMare.getSalaCasa().setTipusSala("Menjador");
-        casaMare.getSalaCasa().setNumeroDeTelevisions(2);
+        casaMare.getSalaCasa().setTipusSala("Habitacio Èrik");
+        casaMare.getSalaCasa().setTipusSala("Habitacio Mare");
+        casaMare.getSalaCasa().setTipusSala("Sala d'estudi");
+        casaMare.getSalaCasa().setTipusSala("Sala de masatges");
+        casaMare.getSalaCasa().setTipusSala("Sala d'estar");
+        casaMare.getSalaCasa().setNumeroDeTelevisions(1);
         casaMare.getCuinaCasa().setNombreDeFogons(6);
         casaMare.getCuinaCasa().setEsIndependet(true);
 
         casaPare.setDireccio("C/ Gran Via de les Corts Catalanes 859");
         casaPare.setSuperficie(85);
-        casaPare.setSalaCasa(menjadroCasaPare);
-        casaPare.getSalaCasa().setTipusSala("Menjador");
-        casaPare.setCuinaCasa(cuinaCasaPare);
+        casaPare.getSalaCasa().setTipusSala("Habitacio Èrik");
+        casaPare.getSalaCasa().setTipusSala("Habitacio Pare");
+        casaPare.getSalaCasa().setTipusSala("Habitacio de convidats");
+        casaPare.getSalaCasa().setTipusSala("Estudi de música");
+        casaPare.getSalaCasa().setTipusSala("Sala d'estar");
+        casaPare.getSalaCasa().setNumeroDeTelevisions(2);
+        casaPare.getCuinaCasa().setNombreDeFogons(4);
+        casaPare.getCuinaCasa().setEsIndependet(true);
     }
 }
