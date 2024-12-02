@@ -3,7 +3,7 @@ package POO.Exercici8;
 public class TestPlayer {
     public static void main(String[] args) {
         Position initialPosition = new Position(5, 5);
-        Player player = new Player(initialPosition, "Player1");
+        Player player = new Player(initialPosition, "Èrik");
 
         System.out.println(player);
 
@@ -15,7 +15,7 @@ public class TestPlayer {
         player.fall();
         System.out.println("After moving left and falling: " + player);
 
-        player.setName("PlayerX");
+        player.setName("Nico");
         System.out.println("Name changed: " + player);
     }
 }
