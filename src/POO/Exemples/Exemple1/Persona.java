@@ -1,4 +1,4 @@
-package POO.Exemple1;
+package POO.Exemples.Exemple1;
 
 public class Persona {
 
