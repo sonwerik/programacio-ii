@@ -1,44 +1,36 @@
 package POO.Exercici8;
 
 public class Player {
-    private Position position;
+    private final Position POSITION;
     private String name;
 
     public Player(Position position, String name) {
-        this.position = position;
+        this.POSITION = position;
         this.name = name;
-    }
-
-    public String getName() {
-        return name;
     }
 
     public void setName(String name) {
         this.name = name;
     }
 
-    public Position getPosition() {
-        return position;
-    }
-
     public void moveRight() {
-        position.incX();
+        POSITION.incX();
     }
 
     public void moveLeft() {
-        position.decX();
+        POSITION.decX();
     }
 
     public void jump() {
-        position.incY();
+        POSITION.incY();
     }
 
     public void fall() {
-        position.decY();
+        POSITION.decY();
     }
 
     @Override
     public String toString() {
-        return "Player: " + name + ", Position: " + position;
+        return "Player: " + name + ", Position: " + POSITION;
     }
 }

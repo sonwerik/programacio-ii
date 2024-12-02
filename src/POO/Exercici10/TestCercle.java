@@ -7,6 +7,11 @@ public class TestCercle {
 
         System.out.println(cercle1);
         System.out.println(cercle2);
-        System.out.println("El Cercle 1 és més gran que el Cercle 2: " + cercle1.esMesGranQue(cercle2));
+
+        if (cercle1.esMesGranQue(cercle2)) {
+            System.out.println("El Cercle 1 és més gran que el Cercle 2.");
+        } else {
+            System.out.println("El Cercle 2 és més gran que el Cercle 1.");
+        }
     }
 }

@@ -3,40 +3,20 @@ package POO.Exercici11;
 import POO.Exercici10.Cercle;
 
 public class Cilindre {
-    private Cercle base;
-    private double altura;
+    private final Cercle BASE;
+    private final double ALTURA;
 
     public Cilindre(double radi, double altura) {
-        this.base = new Cercle(radi);
-        this.altura = altura;
-    }
-
-    public double getRadi() {
-        return base.getRadi();
-    }
-
-    public void setRadi(double radi) {
-        base.setRadi(radi);
-    }
-
-    public double getAltura() {
-        return altura;
-    }
-
-    public void setAltura(double altura) {
-        this.altura = altura;
-    }
-
-    public double getAreaBase() {
-        return base.getArea();
+        this.BASE = new Cercle(radi);
+        this.ALTURA = altura;
     }
 
     public double getAreaTotal() {
-        return 2 * base.getArea() + base.getPerimetre() * altura;
+        return 2 * BASE.getArea() + BASE.getPerimetre() * ALTURA;
     }
 
     public double getVolum() {
-        return base.getArea() * altura;
+        return BASE.getArea() * ALTURA;
     }
 
     public boolean esMesGranQue(Cilindre altre) {
@@ -45,7 +25,7 @@ public class Cilindre {
 
     @Override
     public String toString() {
-        return "Cilindre: Radi = " + base.getRadi() + ", Altura = " + altura +
-                ", Àrea Total = " + getAreaTotal() + ", Volum = " + getVolum();
+        return "Cilindre: \nRadi = " + BASE.getRadi() + "\nAltura = " + ALTURA +
+                "\nÀrea Total = " + getAreaTotal() + "\nVolum = " + getVolum() + "\n";
     }
 }

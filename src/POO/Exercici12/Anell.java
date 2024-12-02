@@ -47,8 +47,7 @@ public class Anell {
 
     @Override
     public String toString() {
-        return "Anell Model: " + model + ", Diàmetre Dit = " + diàmetreDit + " mm, Diàmetre Secció = " + diàmetreSecció +
-                " mm, Pes = " + getPes() + " g, Cost Or = €" + getCostOr() +
-                ", Preu Venda = €" + getPreuVenda();
+        return "Anell: \nModel: " + model + "\nDiàmetre Dit = " + diàmetreDit + " mm\nDiàmetre Secció = " + diàmetreSecció +
+                " mm\nPes = " + getPes() + " g\nCost Or = €" + getCostOr() + "\nPreu Venda = €" + getPreuVenda() + "\n";
     }
 }
