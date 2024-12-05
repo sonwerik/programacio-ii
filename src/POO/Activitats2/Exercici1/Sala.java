@@ -15,11 +15,19 @@ public class Sala {
     public void setNumeroDeTelevisions(int numeroDeTelevisions) {
         this.numeroDeTelevisions = numeroDeTelevisions;
     }
-
     public String getTipusSala() {
         return tipusSala;
     }
     public void setTipusSala(String tipusSala) {
         this.tipusSala = tipusSala;
+    }
+
+    @Override
+    public String toString() {
+        if (numeroDeTelevisions == 1) {
+            return tipusSala + " amb " + numeroDeTelevisions + " televisió.";
+        } else {
+            return tipusSala + " amb " + numeroDeTelevisions + " televisions.";
+        }
     }
 }

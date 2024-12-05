@@ -56,9 +56,7 @@ public class DosDigits {
                     break;
                 case 8:
                     digit1.incrementar();
-                    if (digit1.consultar() == 0) {
-                        digit2.incrementar();
-                    }
+                    digit2.incrementar();
                     System.out.println("Tots dos dígits incrementats.");
                     break;
                 case 9:

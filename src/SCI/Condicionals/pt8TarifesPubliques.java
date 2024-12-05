@@ -10,21 +10,21 @@ public class pt8TarifesPubliques {
         int viatges = sc.nextInt();
 
         if (edat > 0){
-            if (edat > 0 && edat <= 3) {
+            if (edat <= 3) {
             System.out.println("Transport gratuit");
-            } else if (edat > 3 && edat <= 16) {
+            } else if (edat <= 16) {
                 System.out.println("T-16");
-            } else if (edat > 16 && edat <= 25 && viatges > 10) {
+            } else if (edat <= 25 && viatges > 10) {
                 System.out.println("T-jove");
-            } else if (edat > 16 && edat <= 25 && viatges > 5 && viatges <= 10) {
+            } else if (edat <= 25 && viatges > 5) {
                 System.out.println("T-casual");
-            } else if (edat > 16 && edat <= 25 && viatges > 0 && viatges <= 5) {
+            } else if (edat <= 25 && viatges > 0) {
                 System.out.println("Bitllet senzill");
             } else if (edat > 25 && edat < 60 && viatges > 10) {
                 System.out.println("T-usual");
-            } else if (edat > 25 && edat < 60 && viatges > 5 && viatges <= 10) {
+            } else if (edat > 25 && edat < 60 && viatges > 5) {
                 System.out.println("T-casual");
-            } else if (edat > 25 && edat < 60 && viatges > 0 && viatges <= 5) {
+            } else if (edat > 25 && edat < 60 && viatges > 0) {
                 System.out.println("Bitllet senzill");
             } else if (edat >= 60) {
                 System.out.println("Targeta Rosa");

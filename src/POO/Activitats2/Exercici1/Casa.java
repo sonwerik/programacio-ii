@@ -7,7 +7,7 @@ public class Casa {
     private Cuina cuinaCasa;
 
     public Casa() {
-        superficie = 0;
+        superficie = 0.0;
         direccio = "";
         salaCasa = new Sala();
         cuinaCasa = new Cuina();
@@ -36,5 +36,11 @@ public class Casa {
     }
     public void setCuinaCasa(Cuina cuinaCasa) {
         this.cuinaCasa = cuinaCasa;
+    }
+
+    @Override
+    public String toString() {
+        return " Superficie: " + superficie + " m2\n Direccio: " + direccio
+                + "\n Sala: " + salaCasa + "\n Cuina: " + cuinaCasa;
     }
 }

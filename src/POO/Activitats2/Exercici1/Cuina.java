@@ -21,5 +21,14 @@ public class Cuina {
     public void setEsIndependet(boolean esIndependet) {
         this.esIndependet = esIndependet;
     }
+
+    @Override
+    public String toString() {
+        if (esIndependet) {
+            return "Cuina independent amb " + nombreDeFogons + " fogons.";
+        } else {
+            return "Cuina americana amb " + nombreDeFogons + " fogons.";
+        }
+    }
 }
 
