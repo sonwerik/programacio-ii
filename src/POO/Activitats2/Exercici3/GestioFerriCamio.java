@@ -1,6 +1,5 @@
 package POO.Activitats2.Exercici3;
 
-import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class GestioFerriCamio {

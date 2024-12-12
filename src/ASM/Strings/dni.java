@@ -1,4 +1,4 @@
-package ASM.Hackerrank.String;
+package ASM.Strings;
 
 import java.util.Scanner;
 
