@@ -31,6 +31,7 @@ public class GestorFerris {
             System.out.println("0. Sortir del programa");
             System.out.print("\nEsculli una de les opcions anterios: ");
 
+            int numEmbarcat = 0;
             int opcionsFerri = sc.nextInt();
             switch (opcionsFerri) {
 
@@ -41,15 +42,18 @@ public class GestorFerris {
                     System.out.println(camioIsEmbarcat(camio1, camio2, camio3, camio4));
                     break;
                 case 3:
-                    System.out.println(potEmbarcar(ferri, camio1, camio2, camio3, camio4));
+                    System.out.println(potEmbarcar(camio1, camio2, camio3, camio4));
                     break;
                 case 4:
-                    embarcaCamio(camio1, camio2, camio3, camio4);
+                    embarcaCamio(numEmbarcat, camio1, camio2, camio3, camio4);
                     break;
                 case 5:
-
+                    nEsimaPosicio(numEmbarcat, camio1, camio2, camio3, camio4);
+                    break;
                 case 6:
+                    peatgeCamio(camio1, camio2, camio3, camio4);
                 case 7:
+                    System.out.println(peatgeTotal(camio1, camio2, camio3, camio4));
                 case 0:
                     continuar = false;
                     break;
@@ -78,26 +82,67 @@ public class GestorFerris {
         return haEmbarcat;
     }
 
-    public static boolean potEmbarcar(Ferri ferri, Camio... camions) {
+    public static boolean potEmbarcar(Camio... camions) {
         Scanner sc = new Scanner(System.in);
         System.out.print("Introdueix el pes del camio: ");
         double pes = sc.nextDouble();
         return pes + pesTotalCamionsEmbarcats(camions) <= ferri.getPesMaximFerri();
     }
 
-    public static void embarcaCamio(Camio... camions) {
+    public static void embarcaCamio(int numEmbarcat, Camio... camions) {
         Scanner sc = new Scanner(System.in);
         System.out.print("Introdueix la matricula del camio que vols embarcar: ");
         String matricula = sc.next().toUpperCase();
         for (Camio camio : camions) {
             if (matricula.equals(camio.getMatriculaCamio())) {
+                if (!camio.isEmbarcat()) {
                 ferri.setCamionsEmbarcats(ferri.getCamionsEmbarcats() + 1);
                 camio.setEmbarcat(true);
-                System.out.println("Camio amb matrícula" + camio.getMatriculaCamio() + " embarcat correctament!");
+                numEmbarcat++;
+                System.out.println("Camió amb matrícula " + camio.getMatriculaCamio() + " embarcat correctament!");
+                break;
+                } else {
+                    System.out.println("Aquest camio no pot embarcar, perquè ja és al ferri.");
+                }
             } else {
-                System.out.println("Aquest camió no pot embarcat.");
+                System.out.println("Aquest camio no pot embarcar.");
+                break;
             }
-            break;
         }
+    }
+
+    public static void nEsimaPosicio(int numEmbarcat, Camio... camions) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Introdueix la posició del camió: ");
+        int posicio = sc.nextInt();
+        for (Camio camio : camions) {
+            if (camio.isEmbarcat() && posicio == numEmbarcat) {
+                System.out.println(camio.getMatriculaCamio());
+                break;
+            }
+        }
+    }
+
+    public static void peatgeCamio(Camio... camions) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Introdueix la matricula del camio: ");
+        for (Camio camio : camions) {
+            if (camio.isEmbarcat()) {
+                double pes = camio.getPesCamio();
+                double cost = pes * ferri.getPreuPerTona();
+                System.out.println(cost);
+                break;
+            }
+        }
+    }
+
+    public static double peatgeTotal(Camio... camions) {
+        double total = 0.0;
+        for (Camio camio : camions) {
+            double pes = camio.getPesCamio();
+            double cost = pes * ferri.getPreuPerTona();
+            total += cost;
+        }
+        return total;
     }
 }
