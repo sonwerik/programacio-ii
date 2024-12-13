@@ -2,50 +2,76 @@ package POO.Activitats2.Exercici7;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.List;
 
-public class Hotel {
+class Hotel {
     private String nom;
-    private ArrayList<Habitacio> habitacions;
-    private ArrayList<Reserva> reserves;
+    private List<Habitacio> habitacions;
+    private List<Reserva> reserves;
 
-    public Hotel() {
-        habitacions = new ArrayList<>();
-        reserves = new ArrayList<>();
+    public Hotel(String nom) {
+        this.nom = nom;
+        this.habitacions = new ArrayList<>();
+        this.reserves = new ArrayList<>();
     }
 
-    public void ferReserva(LocalDate dataInici, LocalDate dataFi, int habitacio) {
-
+    public void afegirHabitacio(Habitacio habitacio) {
+        if (habitacio == null) {
+            throw new IllegalArgumentException("L'habitació no pot ser nul·la.");
+        }
+        habitacions.add(habitacio);
     }
 
-    public ArrayList<Habitacio> habitaciosDisponibles() {
-        ArrayList<Habitacio> disponible = new ArrayList<>();
-
-        // filtrar
-
-        return disponible;
+    public List<Habitacio> obtenirHabitacionsDisponibles(LocalDate dataInici, LocalDate dataFi) {
+        List<Habitacio> disponibles = new ArrayList<>(habitacions);
+        for (Reserva reserva : reserves) {
+            if (!(dataFi.isBefore(reserva.getDataEntrada()) || dataInici.isAfter(reserva.getDataSortida()))) {
+                disponibles.remove(reserva.getHabitacio());
+            }
+        }
+        return disponibles;
     }
 
-    public void mostraServei(int numHabitacions) {
-
-        // for habitacions, cerca numHabitacions, if found print
+    public boolean reservarHabitacio(LocalDate dataEntrada, LocalDate dataSortida, Habitacio habitacio) {
+        if (dataEntrada == null || dataSortida == null || habitacio == null) {
+            throw new IllegalArgumentException("Les dades de reserva no poden ser nul·les.");
+        }
+        boolean reservada = obtenirHabitacionsDisponibles(dataEntrada, dataSortida).contains(habitacio);
+        switch (reservada ? 1 : 0) {
+            case 1:
+                reserves.add(new Reserva(dataEntrada, dataSortida, habitacio));
+                return true;
+            case 0:
+                return false;
+            default:
+                throw new IllegalStateException("Error inesperat en la reserva.");
+        }
     }
-    /*
-    public boolean isDisponible(LocalDate dataInici, LocalDate dataFi, int habitacio) {
-        boolean disponible = false;
 
-        ArrayList<Habitacio> habitacionsDisponibles = habitacionsDisponibles(dataInici, dataFi);
-
-        return disponible;
+    public boolean estaReservada(LocalDate data, Habitacio habitacio) {
+        for (Reserva reserva : reserves) {
+            if (reserva.getHabitacio().equals(habitacio)
+                    && !data.isBefore(reserva.getDataEntrada()) && !data.isAfter(reserva.getDataSortida())) {
+                return true;
+            }
+        }
+        return false;
     }
 
-    public boolean isDisponible(LocalDate data, int habitacio) {
-        boolean disponible = false;
-
-        ArrayList<Habitacio> habitacionsDisponibles = habitacionsDisponibles(data, data + 1);
-
-        // comprova si habitacio esta en la llista
-
-        return disponible;
+    public void mostrarServeisHabitacio(Habitacio habitacio) {
+        if (habitacio == null) {
+            System.out.println("L'habitació no existeix.");
+        } else {
+            System.out.println("Serveis disponibles per a l'habitació: " + habitacio.getServeis());
+        }
     }
-    */
+
+    @Override
+    public String toString() {
+        return "Hotel{" +
+                "nom='" + nom + '\'' +
+                ", habitacions=" + habitacions +
+                ", reserves=" + reserves +
+                '}';
+    }
 }

@@ -1,55 +1,34 @@
 package POO.Activitats2.Exercici7;
 
 import java.util.ArrayList;
+import java.util.List;
 
-public class Habitacio {
-    private int numeroHabitacio;
-    private String tipus;
-    private ArrayList<Servei> serveis;
-    
-    public Habitacio(int num, String tipus, ArrayList<Servei> serveis) {
-        this.numeroHabitacio = num;
-        this.tipus = tipus;
-        this.serveis = serveis;
-    }
-    
-    public Habitacio() {
-        this.numeroHabitacio = 0;
-        this.tipus = "";
+class Habitacio {
+    private String tipusHabitacio;
+    private List<Servei> serveis;
+
+    public Habitacio(String tipusHabitacio) {
+        this.tipusHabitacio = tipusHabitacio;
         this.serveis = new ArrayList<>();
     }
-    
-    public int getNumeroHabitacio() {
-        return numeroHabitacio;
+
+    public void afegirServei(Servei servei) {
+        serveis.add(servei);
     }
-    
-    public void setNumeroHabitacio(int numeroHabitacio) {
-        this.numeroHabitacio = numeroHabitacio;
+
+    public String getTipusHabitacio() {
+        return tipusHabitacio;
     }
-    
-    public String getTipus() {
-        return tipus;
-    }
-    
-    public void setTipus(String tipus) {
-        this.tipus = tipus;
-    }
-    
-    public ArrayList<Servei> getServeis() {
+
+    public List<Servei> getServeis() {
         return serveis;
     }
-    
-    public void setServeis(ArrayList<Servei> serveis) {
-        this.serveis = serveis;
-    }
-    
+
     @Override
     public String toString() {
         return "Habitacio{" +
-                "num=" + numeroHabitacio +
-                ", tipus='" + tipus + '\'' +
+                "tipusHabitacio='" + tipusHabitacio + '\'' +
                 ", serveis=" + serveis +
                 '}';
     }
-    
 }
