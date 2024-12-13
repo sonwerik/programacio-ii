@@ -17,6 +17,8 @@ public class Modul {
 
     @Override
     public String toString() {
-        return nomModul;
+        return "Modul{" +
+                "nomModul='" + nomModul + '\'' +
+                '}';
     }
 }

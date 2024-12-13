@@ -47,8 +47,11 @@ public class Alumne {
 
     @Override
     public String toString() {
-        return "\n    Nom i cognom: " + nom + ' ' + cognom
-                + "\n    Edat: " + edat
-                + "\n    Dni: " + dni;
+        return "Alumne{" +
+                "nom='" + nom + '\'' +
+                ", cognom='" + cognom + '\'' +
+                ", edat=" + edat +
+                ", dni='" + dni + '\'' +
+                '}';
     }
 }

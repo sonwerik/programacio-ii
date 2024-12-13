@@ -37,9 +37,10 @@ public class Matricula {
 
     @Override
     public String toString() {
-        return "\nMatricula " + alumne.getNom()
-                + ":\n  Informació de l'alumne: " + alumne
-                + "\n  Mòdul cursat: " + modul
-                + "\n  Nota: " + nota;
+        return "Matricula{" +
+                "nota=" + nota +
+                ", alumne=" + alumne +
+                ", modul=" + modul +
+                '}';
     }
 }
