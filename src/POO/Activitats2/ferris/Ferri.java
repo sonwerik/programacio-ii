@@ -1,20 +1,43 @@
-package POO.Activitats2.Exercici3;
+package POO.Activitats2.ferris;
 
 public class Ferri {
+    private int numFerri;
     private String matriculaFerri;
     private String nomFerri;
     private String portDesti;
     private double preuPerTona;
     private double pesMaximFerri;
     private int camionsEmbarcats;
+    private POO.Activitats2.ferris.camio camio;
 
-    public Ferri(String matricula, String nom, String portDesti, double preuPerTona, double pesMaximFerri, int camionsEmbarcats) {
+    public Ferri() {
+        this.numFerri = 0;
+        this.matriculaFerri = "";
+        this.nomFerri = "";
+        this.portDesti = "";
+        this.preuPerTona = 0.0;
+        this.pesMaximFerri = 0.0;
+        this.camionsEmbarcats = 0;
+        this.camio = new camio("7312RMS", 0.0);
+    }
+
+    public Ferri(int numFerri, String matricula, String nom, String portDesti, double preuPerTona, double pesMaximFerri, int camionsCarregats, POO.Activitats2.ferris.camio camio) {
+        this.numFerri = numFerri;
         this.matriculaFerri = matricula;
         this.nomFerri = nom;
         this.portDesti = portDesti;
         this.preuPerTona = preuPerTona;
         this.pesMaximFerri = pesMaximFerri;
-        this.camionsEmbarcats = camionsEmbarcats;
+        this.camionsEmbarcats = camionsCarregats;
+        this.camio = camio;
+    }
+
+    public int getNumFerri() {
+        return numFerri;
+    }
+
+    public void setNumFerri(int numFerri) {
+        this.numFerri = numFerri;
     }
 
     public String getMatriculaFerri() {
@@ -63,6 +86,14 @@ public class Ferri {
 
     public void setCamionsEmbarcats(int camionsEmbarcats) {
         this.camionsEmbarcats = camionsEmbarcats;
+    }
+
+    public POO.Activitats2.ferris.camio getCamio() {
+        return camio;
+    }
+
+    public void setCamio(POO.Activitats2.ferris.camio camio) {
+        this.camio = camio;
     }
 
     @Override

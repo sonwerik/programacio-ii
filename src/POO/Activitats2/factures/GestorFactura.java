@@ -1,4 +1,4 @@
-package POO.Activitats2.Exercici4;
+package POO.Activitats2.factures;
 
 import java.util.Scanner;
 import java.util.regex.Pattern;
@@ -165,8 +165,8 @@ public class GestorFactura {
                     System.out.println("\n  " + client2.getNomCognoms() + "\n  DNI: " + client2.getDni() + "\n  Trucades: " + client2.getQuantitatTrucades() + "\n  Minuts: " + client2.getTrucada().getMinutsTrucada() * client2.getQuantitatTrucades() + "\n  Import total: " + String.format("%.2f", client2.getTrucada().getMinutsTrucada() * client2.getQuantitatTrucades() * client2.getPreuPerMinut()) +  " €");
                     System.out.println("\n  " + client3.getNomCognoms() + "\n  DNI: " + client3.getDni() + "\n  Trucades: " + client3.getQuantitatTrucades() + "\n  Minuts: " + client3.getTrucada().getMinutsTrucada() * client3.getQuantitatTrucades() + "\n  Import total: " + String.format("%.2f", client3.getTrucada().getMinutsTrucada() * client3.getQuantitatTrucades() * client3.getPreuPerMinut()) +  " €");
                     System.out.println("\n  " + client4.getNomCognoms() + "\n  DNI: " + client4.getDni() + "\n  Trucades: " + client4.getQuantitatTrucades() + "\n  Minuts: " + client4.getTrucada().getMinutsTrucada() * client4.getQuantitatTrucades() + "\n  Import total: " + String.format("%.2f", client4.getTrucada().getMinutsTrucada() * client4.getQuantitatTrucades() * client4.getPreuPerMinut()) +  " €");
-
                     if (afegit) {System.out.println("\n  " + client5.getNomCognoms() + "\n  DNI: " + client5.getDni() + "\n  Trucades: " + client5.getQuantitatTrucades() + "\n  Minuts: " + client5.getTrucada().getMinutsTrucada() * client5.getQuantitatTrucades() + "\n  Import total: " + String.format("%.2f", client5.getTrucada().getMinutsTrucada() * client5.getQuantitatTrucades() * client5.getPreuPerMinut()) +  " €");}
+                    break;
             }
         }
     }

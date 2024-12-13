@@ -1,4 +1,4 @@
-package POO.Activitats2.Exercici4;
+package POO.Activitats2.factures;
 
 public class Trucada {
     private String destinatari;

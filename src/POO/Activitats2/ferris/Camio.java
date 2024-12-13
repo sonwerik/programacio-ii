@@ -1,16 +1,20 @@
-package POO.Activitats2.Exercici3;
+package POO.Activitats2.ferris;
 
 public class Camio {
     private String matriculaCamio;
     private double pesCamio;
     private int numCamio;
-    private boolean embarcat;
 
-    public Camio(String matricula, double pes, int numCamio, boolean embarcat) {
+    public Camio() {
+        this.matriculaCamio = "";
+        this.pesCamio = 0.0;
+        this.numCamio = 0;
+    }
+
+    public Camio(String matricula, double pes, int numCamio) {
         this.matriculaCamio = matricula;
         this.pesCamio = pes;
         this.numCamio = numCamio;
-        this.embarcat = false;
     }
 
     public String getMatriculaCamio() {
@@ -24,6 +28,7 @@ public class Camio {
     public double getPesCamio() {
         return pesCamio;
     }
+
     public void setPesCamio(double pesCamio) {
         this.pesCamio = pesCamio;
     }
@@ -34,14 +39,6 @@ public class Camio {
 
     public void setNumCamio(int numCamio) {
         this.numCamio = numCamio;
-    }
-
-    public boolean isEmbarcat() {
-        return embarcat;
-    }
-
-    public void setEmbarcat(boolean embarcat) {
-        this.embarcat = embarcat;
     }
 
     @Override

@@ -22,6 +22,5 @@ public class CasaTest {
         System.out.println("Casa Mare: \n" + casaMare);
         System.out.println();
         System.out.println("Casa Pare: \n" + casaPare);
-
     }
 }
