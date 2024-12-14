@@ -7,7 +7,7 @@ public class GestorFactura {
     private static ArrayList<Client> clients;
 
     public GestorFactura() {
-        this.clients = new ArrayList<>();
+        clients = new ArrayList<>();
     }
 
     public void afegirClient() {
