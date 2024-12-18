@@ -12,18 +12,16 @@ public class TestGame {
         System.out.println(axe);
         System.out.println(arrow);
 
-        Position defaultPosition = new Position(0, 0);
-        Position x1y1 = new Position(1,1);
-        Position x2y2 = new Position(2, 2);
+        Position defaultPosition = new Position();
 
         Player player1 = new Player("Player1", defaultPosition, defautlWeapon);
-        Player player2 = new Player("Player2", x2y2, axe);
+        Player player2 = new Player("Player2", new Position(2,2), axe);
 
         System.out.println("\nPLAYERS");
         System.out.println(player1);
         System.out.println(player2);
 
-        player2.setPosition(x1y1);
+        player2.moveTo(new Position(1,1));
         System.out.println("\nPLAYER2 MOVED");
         System.out.println(player2);
 

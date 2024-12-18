@@ -2,7 +2,7 @@ package POO.Examen.ex2;
 
 import java.util.ArrayList;
 
-public class Table {
+public class    Table {
     private int tableNumber;
     private ArrayList<Order> orders;
 
