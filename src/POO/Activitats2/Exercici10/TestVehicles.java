@@ -1,24 +1,41 @@
 package POO.Activitats2.Exercici10;
 
+import java.util.ArrayList;
+
 public class TestVehicles {
+
     public static void main(String[] args) {
-        // Crear vehicles
-        Cotxe cotxe = new Cotxe("1234ABC", 5, 4);
-        Microbus microbus = new Microbus("5678DEF", 3, 20);
-        VehicleCarrega furgoneta = new VehicleCarrega("9101GHI", 7, 3.5);
-        Camio camio = new Camio("1122JKL", 10, 8.0);
+        Vehicle cotxe = new Cotxe("xxx", 10, 4);
+        Vehicle furgoneta = new FurgonetaCarrega("xxx", 10, 10);
+        Vehicle camio = new Camio("xxx", 10, 4);
+        Vehicle microbus = new Microbus("xxx", 10, 15);
 
-        // Mostrar detalls i preus
-        System.out.println(cotxe);
-        System.out.println("Preu del lloguer: " + cotxe.calcularPreu() + " €");
+        ArrayList<Vehicle> vehicles = new ArrayList<>();
+        vehicles.add(cotxe);
+        vehicles.add(furgoneta);
+        vehicles.add(camio);
+        vehicles.add(microbus);
 
-        System.out.println(microbus);
-        System.out.println("Preu del lloguer: " + microbus.calcularPreu() + " €");
+        for (Vehicle v: vehicles) {
+            if(v instanceof Cotxe){
+                Cotxe c = (Cotxe)v;
+                System.out.println(c+"\n");
+            }
+            if(v instanceof FurgonetaCarrega){
+                FurgonetaCarrega f = (FurgonetaCarrega)v;
+                System.out.println(f+"\n");
+            }
+            if(v instanceof Camio){
+                Camio ca = (Camio)v;
+                System.out.println(ca+"\n");
+            }
+            if(v instanceof Microbus){
+                Microbus m = (Microbus)v;
+                System.out.println(m+"\n");
+            }
 
-        System.out.println(furgoneta);
-        System.out.println("Preu del lloguer: " + furgoneta.calcularPreu() + " €");
+        }
 
-        System.out.println(camio);
-        System.out.println("Preu del lloguer: " + camio.calcularPreu() + " €");
+
     }
 }

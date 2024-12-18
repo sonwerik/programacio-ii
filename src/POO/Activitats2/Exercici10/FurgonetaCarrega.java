@@ -1,41 +1,36 @@
 package POO.Activitats2.Exercici10;
 
-public class Camio extends Vehicle {
+public class FurgonetaCarrega extends Vehicle {
     protected float PMA;
     protected final float adicioCarrega = 20;
-    protected final float adicioCamio = 40;
 
     public float getPMA() {
         return PMA;
     }
 
-    public float getAdicioCarrega() {
+    public float getAdicio() {
         return adicioCarrega;
-    }
-
-    public float getAdicioCamio() {
-        return adicioCamio;
     }
 
     public void setPMA(float PMA) {
         this.PMA = PMA;
     }
 
-    public Camio(String matricula, int dies, float PMA) {
+    public FurgonetaCarrega(String matricula, int dies, float PMA) {
         super(matricula, dies);
         this.PMA = PMA;
     }
 
     @Override
     public float getPreu() {
-        return super.getPreu() + (PMA * adicioCarrega) + adicioCamio;
+        return super.getPreu() + (PMA * adicioCarrega) ;
     }
+
 
     @Override
     public String toString() {
-        return "Camio:" + "\n" +
+        return "FurgonetaCarrega:" + "\n" +
                 "PMA = " + PMA + "\n" +
-                "adicio carrega = " + adicioCarrega + "\n" +
-                "adicio camio = " + adicioCamio;
+                "adicio = " + adicioCarrega;
     }
 }

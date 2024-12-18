@@ -1,4 +1,4 @@
-package POO.Exemples.Exemple3;
+package POO.Practica;
 
 public class Worker {
     private int hoursWorked;

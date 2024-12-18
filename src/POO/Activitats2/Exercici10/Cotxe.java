@@ -1,29 +1,31 @@
 package POO.Activitats2.Exercici10;
 
-class Cotxe extends Vehicle {
-    private int places;
+public class Cotxe extends Vehicle {
+    protected int places;
+    protected final float adicio = 1.5F;
 
-    public Cotxe(String matricula, int diesLloguer, int places) {
-        super(matricula, diesLloguer);
-        if (places <= 0) {
-            throw new IllegalArgumentException("El nombre de places ha de ser major que zero.");
-        }
+    public Cotxe(String matricula, int dies, int places) {
+        super(matricula, dies);
+        this.places = places;
+    }
+
+    public int getPlaces() {
+        return places;
+    }
+
+    public void setPlaces(int places) {
         this.places = places;
     }
 
     @Override
-    public double calcularPreu() {
-        double preu = calcularPreuBase() + (getDiesLloguer() * places * 1.5);
-        switch ((int) Math.signum(preu)) {
-            case 1:
-                return preu;
-            default:
-                throw new IllegalStateException("Error inesperat en el càlcul del preu.");
-        }
+    public float getPreu() {
+        return super.getPreu() + (adicio * places) * dies;
     }
 
     @Override
     public String toString() {
-        return "Cotxe [matricula=" + getMatricula() + ", diesLloguer=" + getDiesLloguer() + ", places=" + places + "]";
+        return super.toString() + "Cotxe:" + "\n" +
+                "places = " + places + "\n" +
+                "adicio = " + adicio;
     }
 }
