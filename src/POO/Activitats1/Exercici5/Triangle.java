@@ -1,9 +1,9 @@
 package POO.Activitats1.Exercici5;
 
 public class Triangle {
-    private double side1;
-    private double side2;
-    private double side3;
+    private final double side1;
+    private final double side2;
+    private final double side3;
 
     public Triangle() {
         this.side1 = 3.0;

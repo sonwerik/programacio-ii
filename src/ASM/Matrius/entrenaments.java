@@ -1,11 +1,11 @@
-package ASM.Hackerrank.Matrius;
+package ASM.Matrius;
 
 import java.util.Arrays;
 import java.util.Scanner;
 import java.util.Random;
 
 public class entrenaments {
-    public static void main(String[] args) {
+    public static void main(String[] ignoredArgs) {
         Scanner sc = new Scanner(System.in);
         Random rand = new Random();
 

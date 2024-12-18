@@ -3,7 +3,7 @@ package Funcions;
 import java.util.Scanner;
 
 public class Ex12ConvertidorDeTemperatures {
-    public static void main(String[] args) {
+    public static void main(String[] ignoredArgs) {
         Scanner sc = new Scanner(System.in);
 
         System.out.print("En quina magnitud vols entrar la temperatura? (Celsius, Farenheit, Kelvin): ");
@@ -14,36 +14,41 @@ public class Ex12ConvertidorDeTemperatures {
 
         System.out.println("\nMenú de conversions: ");
 
-        if (magnitud.equals("celsius")) {
-            System.out.println("1. Celsius a Farenheit");
-            System.out.println("2. Celsius a Kelvin");
-        } else if (magnitud.equals("farenheit")) {
-            System.out.println("1. Farenheit a Celsius");
-            System.out.println("2. Farenheit a Kelvin");
-        } else if (magnitud.equals("kelvin")) {
-            System.out.println("1. Kelvin a Celsius");
-            System.out.println("2. Kelvin a Farenheit");
-        } else {
-            System.out.println("Error: Magnitud desconeguda.");
-            return;
+        switch (magnitud) {
+            case "celsius" -> {
+                System.out.println("1. Celsius a Farenheit");
+                System.out.println("2. Celsius a Kelvin");
+            }
+            case "farenheit" -> {
+                System.out.println("1. Farenheit a Celsius");
+                System.out.println("2. Farenheit a Kelvin");
+            }
+            case "kelvin" -> {
+                System.out.println("1. Kelvin a Celsius");
+                System.out.println("2. Kelvin a Farenheit");
+            }
+            default -> {
+                System.out.println("Error: Magnitud desconeguda.");
+                return;
+            }
         }
 
         System.out.println("3. Sortir");
         System.out.print("\nEscull la conversió: ");
 
         int opcio = sc.nextInt();
-        double resultat = 0;
+        double resultat;
 
         switch (opcio) {
             case 1:
                 if (magnitud.equals("celsius")) resultat = celsiusAFarenheit(temperatura);
                 else if (magnitud.equals("farenheit")) resultat = farenheitACelsius(temperatura);
-                else if (magnitud.equals("kelvin")) resultat = kelvinACelsius(temperatura);
+                else resultat = kelvinACelsius(temperatura);
                 break;
             case 2:
                 if (magnitud.equals("celsius")) resultat = celsiusAKelvin(temperatura);
                 else if (magnitud.equals("farenheit")) resultat = farenheitAKelvin(temperatura);
-                else if (magnitud.equals("kelvin")) resultat = kelvinAFarenheit(temperatura);
+                else resultat = kelvinAFarenheit(temperatura);
                 break;
             case 3:
                 System.out.println("Sortint del programa.");

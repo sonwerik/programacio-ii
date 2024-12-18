@@ -4,10 +4,10 @@ import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
 
 class Contracte {
-    private String codi;
-    private LocalDate dataInici;
-    private LocalDate dataFi;
-    private Empresa empresa;
+    private final String codi;
+    private final LocalDate dataInici;
+    private final LocalDate dataFi;
+    private final Empresa empresa;
 
     public Contracte(String codi, LocalDate dataInici, LocalDate dataFi, Empresa empresa) {
         this.codi = codi;

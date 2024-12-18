@@ -3,7 +3,7 @@ package SCI.Condicionals;
 import java.util.Scanner;
 
 public class pt6DiaDeLaSetmana {
-    public static void main(String[] args) {
+    public static void main(String[] ignoredArgs) {
         Scanner sc = new Scanner(System.in);
 
         int n = sc.nextInt();
@@ -21,7 +21,7 @@ public class pt6DiaDeLaSetmana {
                 System.out.println("Divendres");
             } else if (n == 6) {
                 System.out.println("Dissabte");
-            } else if (n == 7) {
+            } else {
                 System.out.println("Diumenge");
             }
         } else {

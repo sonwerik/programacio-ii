@@ -5,9 +5,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 class Hotel {
-    private String nom;
-    private List<Habitacio> habitacions;
-    private List<Reserva> reserves;
+    private final String nom;
+    private final List<Habitacio> habitacions;
+    private final List<Reserva> reserves;
 
     public Hotel(String nom) {
         this.nom = nom;
@@ -37,15 +37,14 @@ class Hotel {
             throw new IllegalArgumentException("Les dades de reserva no poden ser nul·les.");
         }
         boolean reservada = obtenirHabitacionsDisponibles(dataEntrada, dataSortida).contains(habitacio);
-        switch (reservada ? 1 : 0) {
-            case 1:
+        return switch (reservada ? 1 : 0) {
+            case 1 -> {
                 reserves.add(new Reserva(dataEntrada, dataSortida, habitacio));
-                return true;
-            case 0:
-                return false;
-            default:
-                throw new IllegalStateException("Error inesperat en la reserva.");
-        }
+                yield true;
+            }
+            case 0 -> false;
+            default -> throw new IllegalStateException("Error inesperat en la reserva.");
+        };
     }
 
     public boolean estaReservada(LocalDate data, Habitacio habitacio) {

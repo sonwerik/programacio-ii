@@ -1,8 +1,8 @@
-package ASM.Hackerrank.String;
+package ASM.Strings;
 import java.util.Scanner;
 
 public class comptaVocals {
-    public static void main(String[] args) {
+    public static void main(String[] ignoredArgs) {
         Scanner sc = new Scanner(System.in);
 
         String vocals = "aeiouAEIOU";

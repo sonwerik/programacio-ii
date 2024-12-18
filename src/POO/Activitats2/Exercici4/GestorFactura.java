@@ -73,7 +73,7 @@ public class GestorFactura {
         boolean trobat = false;
         for (Client c : clients) {
             if (c.getDni().equals(dni)) {
-                System.out.println(c.toString());
+                System.out.println(c);
                 trobat = true;
                 break;
             }
@@ -97,18 +97,20 @@ public class GestorFactura {
     }
 
 
-    public static void main(String[] args) {
+    public static void main(String[] ignoredArgs) {
         GestorFactura gestor = new GestorFactura();
         Scanner sc = new Scanner(System.in);
         boolean sortir = false;
 
         while (!sortir) {
-            System.out.println("\nMENU PRINCIPAL");
-            System.out.println("1. Afegir client");
-            System.out.println("2. Afegir trucada a un client");
-            System.out.println("3. Generar factura d'un client");
-            System.out.println("4. Llistar clients");
-            System.out.println("0. Sortir");
+            System.out.println("""
+                    \nMENU PRINCIPAL
+                    1. Afegir client
+                    2. Afegir trucada a un client
+                    3. Generar factura d'un client
+                    4. Llistar clients
+                    0. Sortir
+                    """);
             System.out.print("Selecciona una opció: ");
             int opcio = sc.nextInt();
 

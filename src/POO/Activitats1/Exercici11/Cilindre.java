@@ -3,8 +3,8 @@ package POO.Activitats1.Exercici11;
 import POO.Activitats1.Exercici10.Cercle;
 
 public class Cilindre {
-    private Cercle base;
-    private double altura;
+    private final Cercle base;
+    private final double altura;
 
     public Cilindre(double radi, double altura) {
         this.base = new Cercle(radi);

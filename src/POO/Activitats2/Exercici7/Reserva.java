@@ -3,9 +3,9 @@ package POO.Activitats2.Exercici7;
 import java.time.LocalDate;
 
 class Reserva {
-    private LocalDate dataEntrada;
-    private LocalDate dataSortida;
-    private Habitacio habitacio;
+    private final LocalDate dataEntrada;
+    private final LocalDate dataSortida;
+    private final Habitacio habitacio;
 
     public Reserva(LocalDate dataEntrada, LocalDate dataSortida, Habitacio habitacio) {
         if (dataEntrada.isAfter(dataSortida)) {

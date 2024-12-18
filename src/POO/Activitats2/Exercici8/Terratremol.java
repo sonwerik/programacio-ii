@@ -5,10 +5,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 class Terratremol {
-    private Localitzacio localitzacio;
-    private double magnitud; // Escala de Richter
-    private LocalDate data;
-    private List<Victima> victimes;
+    private final Localitzacio localitzacio;
+    private final double magnitud; // Escala de Richter
+    private final LocalDate data;
+    private final List<Victima> victimes;
 
     public Terratremol(Localitzacio localitzacio, double magnitud, LocalDate data) {
         if (magnitud < 0 || magnitud > 10) {

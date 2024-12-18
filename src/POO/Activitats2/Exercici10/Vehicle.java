@@ -1,36 +1,42 @@
 package POO.Activitats2.Exercici10;
 
-abstract class Vehicle {
-    private String matricula;
-    private int diesLloguer;
+public class Vehicle {
+    protected String matricula;
+    protected final float preuBase = 10;
+    protected int dies;
 
-    public Vehicle(String matricula, int diesLloguer) {
-        if (matricula == null || matricula.isEmpty()) {
-            throw new IllegalArgumentException("La matrícula no pot ser nul·la o buida.");
-        }
-        if (diesLloguer <= 0) {
-            throw new IllegalArgumentException("Els dies de lloguer han de ser majors que zero.");
-        }
+    public Vehicle(String matricula, int dies) {
         this.matricula = matricula;
-        this.diesLloguer = diesLloguer;
+        this.dies = dies;
     }
 
     public String getMatricula() {
         return matricula;
     }
 
-    public int getDiesLloguer() {
-        return diesLloguer;
+    public float getPreuBase() {
+        return preuBase;
     }
 
-    public double calcularPreuBase() {
-        return diesLloguer * 10.0; // Preu base: 10 € per dia
+    public int getDies() {
+        return dies;
     }
 
-    public abstract double calcularPreu();
+    public void setMatricula(String matricula) {this.matricula = matricula;}
+
+    public void setDies(int dies) {
+        this.dies = dies;
+    }
+
+    public float getPreu(){
+        return dies * preuBase;
+    }
 
     @Override
     public String toString() {
-        return "Vehicle [matricula=" + matricula + ", diesLloguer=" + diesLloguer + "]";
+        return "Vehicle:" + "\n" +
+                "matricula = " + matricula + "\n" +
+                "preuBase = " + preuBase + "\n" +
+                "dies = " + dies;
     }
 }

@@ -4,10 +4,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 class Inundacio {
-    private double profunditatAigua;
-    private String data;
-    private List<ZonaEvacuacio> zonesEvacuacio;
-    private List<EquipEmergencia> equipsEmergencia;
+    private final double profunditatAigua;
+    private final String data;
+    private final List<ZonaEvacuacio> zonesEvacuacio;
+    private final List<EquipEmergencia> equipsEmergencia;
 
     public Inundacio(double profunditatAigua, String data) {
         if (profunditatAigua < 0) {
@@ -36,15 +36,11 @@ class Inundacio {
     }
 
     public boolean generarAlerta(double llindar) {
-        switch ((int) Math.signum(profunditatAigua - llindar)) {
-            case 1:
-                return true;
-            case 0:
-            case -1:
-                return false;
-            default:
-                throw new IllegalStateException("Error inesperat en el càlcul d'alerta.");
-        }
+        return switch ((int) Math.signum(profunditatAigua - llindar)) {
+            case 1 -> true;
+            case 0, -1 -> false;
+            default -> throw new IllegalStateException("Error inesperat en el càlcul d'alerta.");
+        };
     }
 
     @Override

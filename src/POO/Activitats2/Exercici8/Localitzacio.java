@@ -1,9 +1,9 @@
 package POO.Activitats2.Exercici8;
 
 class Localitzacio {
-    private double latitud;
-    private double longitud;
-    private String ciutat;
+    private final double latitud;
+    private final double longitud;
+    private final String ciutat;
 
     public Localitzacio(double latitud, double longitud, String ciutat) {
         if (latitud < -90 || latitud > 90) {

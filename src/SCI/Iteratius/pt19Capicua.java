@@ -3,18 +3,18 @@ package SCI.Iteratius;
 import java.util.Scanner;
 
 public class pt19Capicua {
-    public static void main(String[] args) {
+    public static void main(String[] ignoredArgs) {
         Scanner scanner = new Scanner(System.in);
         int nombre = scanner.nextInt();
         String str = Integer.toString(nombre);
-        String strInvers = "";
+        StringBuilder strInvers = new StringBuilder();
         boolean capicua = false;
 
         for (int i = str.length() - 1; i >= 0; i--) {
-            strInvers += str.charAt(i);
+            strInvers.append(str.charAt(i));
         }
 
-        if (str.equals(strInvers)) capicua = true;
+        if (str.contentEquals(strInvers)) capicua = true;
 
         System.out.println(String.valueOf(capicua).toUpperCase());
     }

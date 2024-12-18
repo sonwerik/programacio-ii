@@ -4,8 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 class Habitacio {
-    private String tipusHabitacio;
-    private List<Servei> serveis;
+    private final String tipusHabitacio;
+    private final List<Servei> serveis;
 
     public Habitacio(String tipusHabitacio) {
         this.tipusHabitacio = tipusHabitacio;
@@ -14,10 +14,6 @@ class Habitacio {
 
     public void afegirServei(Servei servei) {
         serveis.add(servei);
-    }
-
-    public String getTipusHabitacio() {
-        return tipusHabitacio;
     }
 
     public List<Servei> getServeis() {

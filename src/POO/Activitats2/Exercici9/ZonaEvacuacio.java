@@ -4,9 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 class ZonaEvacuacio {
-    private String nom;
-    private int capacitat;
-    private List<String> personesEvacuades;
+    private final String nom;
+    private final int capacitat;
+    private final List<String> personesEvacuades;
 
     public ZonaEvacuacio(String nom, int capacitat) {
         if (capacitat <= 0) {

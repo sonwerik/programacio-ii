@@ -1,11 +1,11 @@
 package POO.Activitats1.Exercici4;
 
 public class AlumneTest {
-    public static void main(String[] args) {
+    public static void main(String[] ignoredArgs) {
 //crea un objecte uf4.exemples.Alumne i l'assigna a la variable alumne1
-        Alumne alumne1 = null;
-        Alumne alumne2 = null;
-        Alumne alumne3 = null;
+        Alumne alumne1;
+        Alumne alumne2;
+        Alumne alumne3;
         alumne1 = new Alumne();
         alumne1.setNom("Ramon");
         alumne2 = new Alumne();

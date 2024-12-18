@@ -1,9 +1,9 @@
 package POO.Activitats2.Exercici5;
 
 class Empresa {
-    private String cif;
-    private String nom;
-    private String sector;
+    private final String cif;
+    private final String nom;
+    private final String sector;
 
     public Empresa(String cif, String nom, String sector) {
         this.cif = cif;

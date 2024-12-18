@@ -4,9 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 class Persona {
-    private String dni;
-    private String nom;
-    private List<Contracte> contractes;
+    private final String dni;
+    private final String nom;
+    private final List<Contracte> contractes;
 
     public Persona(String dni, String nom) {
         this.dni = dni;

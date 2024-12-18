@@ -3,8 +3,8 @@ package POO.Activitats2.Exercici6;
 import java.time.LocalDateTime;
 
 class Visita {
-    private LocalDateTime dataHora;
-    private String pacient;
+    private final LocalDateTime dataHora;
+    private final String pacient;
 
     public Visita(LocalDateTime dataHora, String pacient) {
         this.dataHora = dataHora;
@@ -13,10 +13,6 @@ class Visita {
 
     public LocalDateTime getDataHora() {
         return dataHora;
-    }
-
-    public String getPacient() {
-        return pacient;
     }
 
     @Override

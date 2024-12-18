@@ -1,9 +1,9 @@
-package ASM.Hackerrank.String;
+package ASM.Strings;
 
 import java.util.Scanner;
 
 public class totesVocals {
-    public static void main(String[] args) {
+    public static void main(String[] ignoredArgs) {
         Scanner sc = new Scanner(System.in);
 
         String vowels = "aeiou";

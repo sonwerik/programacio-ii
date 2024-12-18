@@ -1,10 +1,10 @@
-package ASM.Hackerrank.Arrays;
+package ASM.Arrays;
 
 import java.util.Scanner;
 
 public class missatgeReduit {
 
-    public static void main(String[] args) {
+    public static void main(String[] ignoredArgs) {
         Scanner scanner = new Scanner(System.in);
         String text = scanner.nextLine();
         String upperText = text.toUpperCase();

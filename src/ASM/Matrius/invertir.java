@@ -1,9 +1,9 @@
-package ASM.Hackerrank.Matrius;
+package ASM.Matrius;
 
 import java.util.Scanner;
 
 public class invertir {
-    public static void main(String[] args) {
+    public static void main(String[] ignoredArgs) {
         Scanner sc = new Scanner(System.in);
 
         int n = sc.nextInt();
@@ -18,9 +18,9 @@ public class invertir {
             }
         }
 
-        for (int i = 0; i < revertArr.length; i++) {
-            for (int j = 0; j < revertArr[i].length; j++) {
-                System.out.print(revertArr[i][j] + " ");
+        for (int[] ints : revertArr) {
+            for (int anInt : ints) {
+                System.out.print(anInt + " ");
             }
             System.out.println();
         }

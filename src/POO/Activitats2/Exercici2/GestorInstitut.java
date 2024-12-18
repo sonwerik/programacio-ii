@@ -3,7 +3,7 @@ package POO.Activitats2.Exercici2;
 import java.util.ArrayList;
 
 public class GestorInstitut {
-    private ArrayList<Matricula> matricules;
+    private final ArrayList<Matricula> matricules;
 
     public GestorInstitut() {
         matricules = new ArrayList<>();
@@ -17,7 +17,7 @@ public class GestorInstitut {
         double suma = 0;
         int comptador = 0;
         for (Matricula matricula : matricules) {
-            if (matricula.getAlumne().equals(dni)) {
+            if (matricula.getAlumne().toString().equals(dni)) {
                 suma += matricula.getNota();
                 comptador++;
             }
@@ -42,7 +42,7 @@ public class GestorInstitut {
 
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] ignoredArgs) {
         GestorInstitut poblenou = new GestorInstitut();
 
         Alumne alumne1 = new Alumne("Èrik", "Lledó", 20, "43572893Z");

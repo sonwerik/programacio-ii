@@ -4,9 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 class EquipEmergencia {
-    private String nom;
-    private String tipus;
-    private List<String> membres;
+    private final String nom;
+    private final String tipus;
+    private final List<String> membres;
 
     public EquipEmergencia(String nom, String tipus) {
         if (nom == null || nom.isEmpty()) {

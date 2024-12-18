@@ -5,9 +5,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 class Consultori {
-    private String nomDoctor;
-    private String especialitat;
-    private List<Visita> visites;
+    private final String nomDoctor;
+    private final String especialitat;
+    private final List<Visita> visites;
 
     public Consultori(String nomDoctor, String especialitat) {
         this.nomDoctor = nomDoctor;
@@ -28,26 +28,22 @@ class Consultori {
 
     public boolean programarVisita(Visita visita) {
         boolean disponible = verificarDisponibilitat(visita.getDataHora());
-        switch (disponible ? 1 : 0) {
-            case 1:
+        return switch (disponible ? 1 : 0) {
+            case 1 -> {
                 visites.add(visita);
-                return true;
-            case 0:
-                return false;
-            default:
-                throw new IllegalStateException("Unexpected value: " + disponible);
-        }
+                yield true;
+            }
+            case 0 -> false;
+            default -> throw new IllegalStateException("Unexpected value: " + disponible);
+        };
     }
 
     public void comptarVisites() {
         int totalVisites = visites.size();
-        switch (totalVisites) {
-            case 0:
-                System.out.println("No hi ha visites programades.");
-                break;
-            default:
-                System.out.println("Nombre total de visites: " + totalVisites);
-                break;
+        if (totalVisites == 0) {
+            System.out.println("No hi ha visites programades.");
+        } else {
+            System.out.println("Nombre total de visites: " + totalVisites);
         }
     }
 
@@ -58,13 +54,10 @@ class Consultori {
                 comptador++;
             }
         }
-        switch ((int) comptador) {
-            case 0:
-                System.out.println("No hi ha visites entre " + inici + " i " + fi + ".");
-                break;
-            default:
-                System.out.println("Nombre de visites entre " + inici + " i " + fi + ": " + comptador);
-                break;
+        if ((int) comptador == 0) {
+            System.out.println("No hi ha visites entre " + inici + " i " + fi + ".");
+        } else {
+            System.out.println("Nombre de visites entre " + inici + " i " + fi + ": " + comptador);
         }
     }
 

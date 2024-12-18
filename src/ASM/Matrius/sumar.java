@@ -1,9 +1,9 @@
-package ASM.Hackerrank.Matrius;
+package ASM.Matrius;
 
 import java.util.Scanner;
 
 public class sumar {
-    public static void main(String[] args) {
+    public static void main(String[] ignoredArgs) {
         Scanner sc = new Scanner(System.in);
 
         int n1 = sc.nextInt();
@@ -32,9 +32,9 @@ public class sumar {
             }
         }
 
-        for (int i = 0; i < arr3.length; i++) {
+        for (int[] n : arr3) {
             for (int j = 0; j < arr3.length; j++) {
-                System.out.print(arr3[i][j] + " ");
+                System.out.print(n[j] + " ");
             }
             System.out.println();
         }

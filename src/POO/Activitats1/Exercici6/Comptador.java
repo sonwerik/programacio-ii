@@ -2,7 +2,7 @@ package POO.Activitats1.Exercici6;
 
 public class Comptador {
     private int digit;
-    private int limit;
+    private final int limit;
 
     public Comptador(int limit) {
         this.digit = 0;

@@ -1,9 +1,9 @@
 package POO.Activitats2.Exercici8;
 
 class Victima {
-    private String nom;
-    private int edat;
-    private String estat;
+    private final String nom;
+    private final int edat;
+    private final String estat;
 
     public Victima(String nom, int edat, String estat) {
         if (edat < 0) {

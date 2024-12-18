@@ -1,9 +1,9 @@
-package ASM.Hackerrank.Arrays;
+package ASM.Arrays;
 
 import java.util.Scanner;
 
 public class mode {
-    public static void main(String[] args) {
+    public static void main(String[] ignoredArgs) {
         Scanner sc = new Scanner(System.in);
 
         int n = sc.nextInt();
