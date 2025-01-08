@@ -1,6 +1,6 @@
 package POO.Activitats2.Solucions.Ex1.Casa;
 
-// Classe Test per provar les classes
+// Classe POO.ProjecteNadal.Test per provar les classes
 public class TestCasa {
     public static void main(String[] ignoredArgs) {
         // Crear casa amb valors per defecte

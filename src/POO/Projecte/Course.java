@@ -7,7 +7,7 @@ public class Course {
     private Branch branch; // ADMINISTRATION, MARKETING, IT
     private String[] studies; // "DAM", "ASIX", SMIX...
     private Shift shift; // MORNING, AFTERNOON
-    private int level; // 1 = first year, 2 = second year...
+    private int course; // 1 = first year, 2 = second year...
 
     // Enums
     public enum Branch {
@@ -15,7 +15,7 @@ public class Course {
         MARKETING,
         IT
     }
-
+ 
     public enum Shift {
         MORNING,
         AFTERNOON
@@ -24,15 +24,15 @@ public class Course {
     public Course() {
         idCourse = 0;
         studies = new String[]{};
-        level = 1;
+        course = 1;
     }
 
-    public Course(int idCourse, Branch branch, String[] studies, Shift shift, int level) {
+    public Course(int idCourse, Branch branch, String[] studies, Shift shift, int course) {
         this.idCourse = idCourse;
         this.branch = branch;
         this.studies = studies;
         this.shift = shift;
-        this.level = level;
+        this.course = course;
     }
 
     public int getIdCourse() {
@@ -67,12 +67,12 @@ public class Course {
         this.shift = shift;
     }
 
-    public int getLevel() {
-        return level;
+    public int getCourse() {
+        return course;
     }
 
-    public void setLevel(int level) {
-        this.level = level;
+    public void setCourse(int course) {
+        this.course = course;
     }
 
     @Override
@@ -82,7 +82,7 @@ public class Course {
                 ", branch=" + branch +
                 ", studies=" + Arrays.toString(studies) +
                 ", shift=" + shift +
-                ", level=" + level +
+                ", level=" + course +
                 '}';
     }
 }
