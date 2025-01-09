@@ -39,7 +39,7 @@ public class Test {
     }
 
     private static Module createModule(Cycle cycle) {
-        Module module = new Module("Fonaments de Programació");
+        Module module = new Module("Programació");
         Professor[] professors = createProfessors();
         addProfessorsToModule(module, professors);
         cycle.addModule(1, module);
@@ -87,9 +87,9 @@ public class Test {
         System.out.println("0. Sortir");
     }
 
-    private static int getUserChoice(Scanner scanner) {
+    private static int getUserChoice(Scanner sc) {
         System.out.print("Tria una opció: ");
-        return scanner.nextInt();
+        return sc.nextInt();
     }
 
     private static void searchByName(Scanner sc) {
@@ -150,7 +150,6 @@ public class Test {
             Professor professor = findProfessorByName(fullName);
 
             if (professor != null) {
-                System.out.println("Professor trobat: " + professor.getFullName());
                 makeBook(sc, professor);
                 break;
             } else {
@@ -180,6 +179,7 @@ public class Test {
 
             if (professor != null) {
                 System.out.println("Professor trobat: " + professor.getFullName());
+
                 makeBook(sc, professor);
                 break;
             } else {
@@ -199,22 +199,22 @@ public class Test {
         };
     }
 
-    private static void searchByModule(Scanner scanner, Module module) {
+    private static void searchByModule(Scanner sc, Module module) {
         System.out.println("Mòduls disponibles:");
         System.out.println(module.getName());
         System.out.print("Selecciona un mòdul: ");
-        String moduleName = scanner.nextLine();
+        sc.nextLine(); String moduleName = sc.nextLine();
         if (module.getName().equalsIgnoreCase(moduleName)) {
             System.out.println("Professors del mòdul " + moduleName + ":");
             for (Professor p : module.getProfessors()) {
                 System.out.println(p.getFullName());
             }
             System.out.print("Selecciona un professor: ");
-            String professorName = scanner.nextLine();
+            sc.nextLine();String professorName = sc.nextLine();
             Professor professor = findProfessorByName(professorName);
 
             if (professor != null) {
-                makeBook(scanner, professor);
+                makeBook(sc, professor);
             } else {
                 System.out.println("No s'ha trobat cap professor amb aquest nom.");
             }
@@ -227,7 +227,7 @@ public class Test {
         LocalDate today = LocalDate.now();
         LocalDate minDate = today.plusDays(1);  // Prevent booking for today or in the past
 
-        System.out.println("Availability schedule for Professor " + professor.getFullName() + ":");
+        System.out.println("Horari disponible del professor " + professor.getFullName() + ":");
 
         // Loop through the available dates of the professor
         for (Map.Entry<String, Map<String, Boolean>> entry : professor.getAvailability().entrySet()) {
@@ -249,11 +249,11 @@ public class Test {
         }
     }
 
-    private static void makeBook(Scanner scanner, Professor professor) {
+    private static void makeBook(Scanner sc, Professor professor) {
         LocalDate today = LocalDate.now();
         LocalDate minDate = today.plusDays(1);  // Prevent booking for today or in the past
 
-        System.out.println("Professor's availability for " + professor.getFullName() + ":");
+        showProfessorAvailability(professor);
 
         // Loop through the professor's available dates
         for (String date : professor.getAvailableDates()) {
@@ -261,18 +261,18 @@ public class Test {
 
             // Only show future dates and exclude weekends
             if (dateObj.isAfter(minDate) && dateObj.getDayOfWeek() != DayOfWeek.SATURDAY && dateObj.getDayOfWeek() != DayOfWeek.SUNDAY) {
-                System.out.println("Date: " + date);
+                System.out.println("Data: " + date);
 
                 // Loop through the time slots available for this date
                 for (String timeSlot : professor.getAvailableTimeSlots(date)) {
                     boolean isAvailable = professor.isAvailable(date, timeSlot);
-                    System.out.println("  Time: " + timeSlot + " - " + (isAvailable ? "Available" : "Not available"));
+                    System.out.println("Hora: " + timeSlot + " - " + (isAvailable ? "Disponible" : "No Disonible"));
                 }
             }
         }
 
-        System.out.print("Enter the date and time for your appointment (e.g., 2025-01-10 10:00): ");
-        String input = scanner.nextLine();
+        System.out.print("Introdueix una data i hora per realizar la cita (Ex: 2025-01-10 10:00): ");
+        String input = sc.nextLine();
 
         // Split the input into date and time components
         String[] parts = input.split(" ");
@@ -284,14 +284,15 @@ public class Test {
             Appointment appointment = new Appointment(date, timeSlot, professor, "Room 101");
             System.out.println(appointment.getDetails());
         } else {
-            System.out.println("The professor is not available at that time.");
-            System.out.print("Would you like to try again? (yes/no): ");
-            String tryAgain = scanner.nextLine();
+            System.out.println("El professor no está disponible en aquest horari.");
+            System.out.print("Vols tornar a intentar-ho? (Sí/No): ");
+            String tryAgain = sc.nextLine();
             if (tryAgain.equalsIgnoreCase("yes")) {
-                makeBook(scanner, professor);  // Retry the booking process
+                makeBook(sc, professor);
             } else {
-                System.out.println("Booking attempt cancelled.");
+                System.out.println("No s'ha trobat cap professor.");
             }
         }
+        sc.close();
     }
 }
