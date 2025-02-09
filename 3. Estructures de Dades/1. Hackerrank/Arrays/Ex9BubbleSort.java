@@ -9,12 +9,10 @@ public class Ex9BubbleSort {
         String[] teams = new String[n];
         int[] scores = new int[n];
 
-
         for (int i = 0; i < n; i++) {
             teams[i] = sc.next();
             scores[i] = sc.nextInt();
         }
-
 
         for (int i = 0; i < n - 1; i++) {
             for (int j = 0; j < n - i - 1; j++) {
@@ -31,7 +29,6 @@ public class Ex9BubbleSort {
                 }
             }
         }
-
 
         for (int i = 0; i < n; i++) {
             System.out.println(teams[i] + " " + scores[i]);
