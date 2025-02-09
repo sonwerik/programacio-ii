@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class pt5EnfonsaLaFlota {
+public class Ex5EnfonsaLaFlota {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
