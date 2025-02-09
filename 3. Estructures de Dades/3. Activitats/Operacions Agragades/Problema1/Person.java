@@ -1,5 +1,3 @@
-package AggregateOperations.Problema1;
-
 class Person {
     String name;
     int age;
