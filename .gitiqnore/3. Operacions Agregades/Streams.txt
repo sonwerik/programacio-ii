@@ -1,0 +1,26 @@
+Operacions Agregades (Streams)
+Operacions Intermèdies
+
+    filter(Predicate<T> predicate): Filtra elements.
+
+    map(Function<T, R> mapper): Transforma elements.
+
+    sorted(): Ordena elements.
+
+    distinct(): Elimina duplicats.
+
+    limit(long maxSize): Limita el nombre d'elements.
+
+Operacions Terminals
+
+    forEach(Consumer<T> action): Executa una acció per a cada element.
+
+    collect(Collector<T, A, R> collector): Transforma el Stream en una col·lecció.
+
+    count(): Retorna el nombre d'elements.
+
+    anyMatch(Predicate<T> predicate): Comprova si algun element compleix la condició.
+
+    allMatch(Predicate<T> predicate): Comprova si tots els elements compleixen la condició.
+
+    reduce(BinaryOperator<T> accumulator): Redueix els elements a un sol valor.

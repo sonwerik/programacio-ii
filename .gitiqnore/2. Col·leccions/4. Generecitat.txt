@@ -1,0 +1,31 @@
+Generecitat
+
+    Classes genèriques: Permeten treballar amb qualsevol tipus de dades.
+    java
+    Copy
+
+    public class Caixa<T> {
+        private T contingut;
+        public void setContingut(T contingut) {
+            this.contingut = contingut;
+        }
+        public T getContingut() {
+            return contingut;
+        }
+    }
+
+    Mètodes genèrics: Accepten qualsevol tipus de dades.
+    java
+    Copy
+
+    public <T> void imprimir(T element) {
+        System.out.println(element);
+    }
+
+    Comodins: Milloren la flexibilitat dels tipus genèrics.
+
+        <?>: Qualsevol tipus.
+
+        <? extends T>: Tipus T o subclasses.
+
+        <? super T>: Tipus T o superclasses.

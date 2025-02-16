@@ -1,0 +1,23 @@
+Arrays Unidimensionals
+
+Els arrays són estructures de dades de mida fixa.
+
+    Accés a elements: array[index].
+
+    Assignació d'elements: array[index] = valor.
+
+    Longitud de l'array: array.length.
+
+    Recorregut:
+    java
+    Copy
+
+    for (int i = 0; i < array.length; i++) {
+        System.out.println(array[i]);
+    }
+
+    Ordenació: Arrays.sort(array).
+
+    Còpia: Arrays.copyOf(array, novaMida).
+
+    Cerca binària: Arrays.binarySearch(array, valor).

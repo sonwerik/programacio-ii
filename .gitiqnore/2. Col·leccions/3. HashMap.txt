@@ -1,0 +1,13 @@
+2.3 Diccionari - HashMap
+
+    put(K key, V value): Afegeix una parella clau-valor.
+
+    get(K key): Retorna el valor associat a la clau.
+
+    remove(K key): Elimina la parella clau-valor.
+
+    containsKey(K key): Comprova si conté la clau.
+
+    size(): Retorna el nombre de parelles clau-valor.
+
+    clear(): Elimina totes les parelles.

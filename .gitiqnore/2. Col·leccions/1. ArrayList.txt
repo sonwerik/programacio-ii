@@ -1,0 +1,13 @@
+Llista - ArrayList
+
+    add(E e): Afegeix un element.
+
+    get(int index): Retorna l'element en la posició index.
+
+    remove(int index): Elimina l'element en la posició index.
+
+    size(): Retorna el nombre d'elements.
+
+    contains(Object o): Comprova si conté l'element.
+
+    clear(): Elimina tots els elements.

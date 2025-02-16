@@ -1,0 +1,21 @@
+Operacions amb Strings
+
+    charAt(int index): Retorna el caràcter en la posició index.
+
+    length(): Retorna la longitud del String.
+
+    substring(int beginIndex, int endIndex): Retorna una subcadena.
+
+    indexOf(String str): Retorna l'índex de la primera aparició de str.
+
+    equals(String str): Compara dos Strings.
+
+    toLowerCase(): Converteix a minúscules.
+
+    toUpperCase(): Converteix a majúscules.
+
+    trim(): Elimina espais en blanc als extrems.
+
+    replace(char oldChar, char newChar): Reemplaça caràcters.
+
+    split(String regex): Divideix el String en un array.

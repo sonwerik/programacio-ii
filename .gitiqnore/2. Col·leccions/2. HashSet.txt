@@ -1,0 +1,11 @@
+Conjunt - HashSet
+
+    add(E e): Afegeix un element.
+
+    remove(Object o): Elimina un element.
+
+    contains(Object o): Comprova si conté l'element.
+
+    size(): Retorna el nombre d'elements.
+
+    clear(): Elimina tots els elements.

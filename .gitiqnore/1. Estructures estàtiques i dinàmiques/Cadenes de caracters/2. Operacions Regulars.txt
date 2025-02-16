@@ -1,0 +1,13 @@
+Operacions Regulars (Regex)
+
+    Pattern.compile(String regex): Compila una expressió regular.
+
+    Matcher.matches(): Comprova si el text coincideix amb el patró.
+
+    Matcher.find(): Cerca la següent coincidència.
+
+    String.matches(String regex): Comprova si el String coincideix amb el patró.
+
+    String.replaceAll(String regex, String replacement): Reemplaça totes les coincidències.
+
+    String.split(String regex): Divideix el String segons el patró.

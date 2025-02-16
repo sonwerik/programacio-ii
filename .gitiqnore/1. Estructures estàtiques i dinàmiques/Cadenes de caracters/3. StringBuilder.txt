@@ -1,0 +1,15 @@
+StringBuilder
+
+    append(String str): Afegeix una cadena al final.
+
+    insert(int offset, String str): Insereix una cadena en una posició específica.
+
+    delete(int start, int end): Elimina caràcters.
+
+    reverse(): Inverteix el contingut.
+
+    toString(): Converteix a String.
+
+    length(): Retorna la longitud.
+
+    charAt(int index): Retorna el caràcter en la posició index.
